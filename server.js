@@ -24,6 +24,7 @@ app.listen(PORT, ()=>{
 app.get('/todos', (req,res)=>{
     res.json({
         success : true ,
+        
         data    : todos
     });
 });
