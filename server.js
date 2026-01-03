@@ -130,7 +130,7 @@ app.delete('/todos/:id' , (req,res)=>{
 
     res.json({
         sucess : true ,
-        message : "Need to delete a TODO sucessfully"
+        message : "Need to deLT a TODO sucessfully"
     });
 });
 
