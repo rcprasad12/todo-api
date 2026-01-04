@@ -1,34 +1,33 @@
-const express = require('express');
-const app = express () ;
+const express = require("express");
+const app = express();
 const PORT = 3000;
 
 //middleeware to parse json
+
+
 app.use(express.json());
 
 
 
 let todos = [];
 let nextId = 1;
-
 //routes will go there 
 
 
-//start the server 
+//start the server
 
 app.listen(PORT, ()=>{
-    console.log(`Server is loading on the http://localhost: ${PORT}`);
-});
-
+    console.log(`Server is loading on the http://localhost: ${PORT} `);
+})
 
 //get all the todos
-app.get('/todos', (req,res)=>{
+
+app.get('/todos' , (req,res)=>{
     res.json({
         success : true ,
-        
-        data    : todos
-    });
+        data : todos
+    })
 });
-
 //get todo specific for an ID
 
 app.get('/todos/:id', (req,res)=>{
