@@ -30,25 +30,27 @@ app.get('/todos' , (req,res)=>{
 });
 //get todo specific for an ID
 
-app.get('/todos/:id', (req,res)=>{
+
+app.get('/todos/:id' , (req,res)=>{
     const id = parseInt(req.params.id);
     const todo = todos.find(t=>t.id === id);
-
-    if(!todos){
-        return res.status(404).json({
-            success: false ,
-            message : "todos not found"
+    if(!todo){
+        return res.json(404).json({
+            success : false ,
+            message : "todo not found"
         });
-
     }
-
     res.json({
         success : true ,
-        data    : todos
-
-    })
-
+        data    : todo
+    });
 });
+
+
+
+
+
+
 
 //create a new todo
 
