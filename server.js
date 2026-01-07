@@ -109,7 +109,7 @@ app.put('/todos/:id', (req,res)=>{
     res.json({
         success : true ,
         data    : todos[todoIndex]
-        
+
 
     });
 
@@ -118,26 +118,24 @@ app.put('/todos/:id', (req,res)=>{
 
 //Delete a todo 
 
+
 app.delete('/todos/:id' , (req,res)=>{
     const id = parseInt(req.params.id);
-    const todoIndex = todos.findIndex(t=>t.id === id);
+    const  todoIndex = todos.findIndex(t=>t.id === id);
 
     if(todos === -1){
         return res.status(404).json({
-            success : false ,
+            success : false,
             message : "todo not found"
         });
     }
-
     todos.splice(todoIndex , 1);
-
     res.json({
-        sucess : true ,
-        message : "Need to deLT a TODO sucessfully"
+        success : true , 
+        message : "Need to delete the todo succesfully"
     });
+
 });
-
-
 
 
 
