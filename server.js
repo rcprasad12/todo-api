@@ -102,6 +102,7 @@ app.put('/todos/:id', (req,res)=>{
         ...todos[todoIndex] ,
         title : title !== undefined ? title : todos[todoIndex].title ,
         description : description !== undefined ? description : todos[todoIndex].description ,
+        
         completed   : completed   !== undefined ? completed : todos[todoIndex].completed ,
 
         updatedAt   : new Date().toISOString()
