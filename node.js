@@ -12,6 +12,8 @@ let nextId = 1;
 app.listen(PORT , ()=>{
     console.log(`Server is running on the http://localhost:${PORT}`);
 
+    
+
 })
 
 //get ALL the todos
