@@ -12,7 +12,7 @@ let nextId = 1;
 app.listen(PORT , ()=>{
     console.log(`Server is running on the http://localhost:${PORT}`);
 
-    
+
 
 })
 
@@ -30,6 +30,7 @@ app.get('/todos' , (req,res)=>{
 
 app.get('/todos' , (req,res)=>{
     const id = parseInt(req.params.id);
+    
     const todo = todos.find(t=>t.id === id);
 
     
