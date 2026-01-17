@@ -80,7 +80,7 @@ app.post('/todos' , (req,res)=> {
 //update an existing todo
 
 app.put('/todos/:id', (req,res)=>{
-    
+
     const id = parseInt(req.params.id);
 
 
@@ -143,7 +143,7 @@ app.delete('/todos/:id' , (req,res)=>{
     todos.splice(todoIndex , 1);
     res.json({
         success : true , 
-        message : "Need to delete the todo succesfully"
+        message : "delete the todo succesfully"
     });
 
 });
