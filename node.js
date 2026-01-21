@@ -106,7 +106,7 @@ app.put('/todos/:id',(req,res)=>{
         title : title !== undefined ? title : todos[todoIndex].title,
 
 
-        
+
 
         description : description !== undefined ? description : todos[todoIndex].description,
 
@@ -129,6 +129,9 @@ app.put('/todos/:id',(req,res)=>{
 app.delete('/todos/:id',(req,res)=>{
     const id = parseInt(req.params.id);
     const todoIndex = todos.findIndex(t=>t.id === id);
+
+
+    
     if(todoIndex === -1){
         return res.status(400).json({
             success : false ,
