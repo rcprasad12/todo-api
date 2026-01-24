@@ -137,10 +137,16 @@ app.delete('/todos/:id' , (req,res)=>{
     if(todos === -1){
         return res.status(404).json({
             success : false,
+
+
+
             message : "todo not found"
         });
     }
     todos.splice(todoIndex , 1);
+
+
+    
     res.json({
         success : true , 
         message : "delete the todo succesfully"
